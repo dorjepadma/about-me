@@ -1,14 +1,16 @@
 *{box-sizing: border-box;}
 
+Body {
+    background-color: lightblue;
+}
+
 img {
     border-radius: line 2px;
-    border: color: black;
+    border: 10px solid black;
     text-align: center;
-   
     display: block;
     margin-left: auto;
-    margin-right: auto 
-
+    margin-right: auto;
 }
 
 h1 {
@@ -25,12 +27,18 @@ font-size:28px;
 font-style: italic;
 }
 
-body {
+Body {
     color:black;
-    text-align: center;
     font: Helvetica;
-    font-size:18px;
-    
+    font-size: 24px;
+}
 
-
+button {
+    width: 50%;
+    height: 300%;
+    font-size: 16px;
+    display: block;
+    max-width: 300px;
+    margin: auto;
+   
 }
