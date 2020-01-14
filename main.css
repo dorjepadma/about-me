@@ -1,0 +1,36 @@
+*{box-sizing: border-box;}
+
+img {
+    border-radius: line 2px;
+    border: color: black;
+    text-align: center;
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+
+}
+
+h1 {
+    color:black;
+    text-align: center;
+    font: Helvetica;
+    font-size:36px;
+    font-style: bold;
+}
+
+h2 {
+    color: blueviolet;
+font-size:28px;
+font-style: italic;
+}
+
+body {
+    color:black;
+    text-align: center;
+    font: Helvetica;
+    font-size:18px;
+    
+
+
+}
