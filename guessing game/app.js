@@ -1,37 +1,35 @@
-
-
+import numberGuess from './guessing game/numberGuess.js';
 let randomNumber = Math.floor(Math.random()*20);
 
-const guesses = document.getElementById('.guesses')
-const yamasWords= document.getElementById('.Yama Says');
-const numberGuess = document.getElementById('.LastResult');
-const lowOrHi = document.getElementById('.lowOrHi');
-const guessSubmit = document.getElementById('.guessSubmit')
-const triesLeft= document.getElementById('.guessField');
+const input = document.getElementById('guessField');
+const submitGuess = document.getElementById('submitGuess');
+const guesses = document.getElementById('guesses');
+const lowOrHi = document.getElementById('lowOrHi');
+const lastResult = document.getElementById('lastResult');
 let guessCount = 0;
 
-function checkGuess(){
+submitGuess.addEventListener('click', () => {
+const userGuess = input.value ()
+function compareNumbers(){
     let userGuess = Number(guessField.value);
-    if (guesscount ===1) 
-{guesses.textContent = 'Previous Guesses: '}
+    if (guessCount === 4)
 
-guesses.textContent += ueserGuess + ' ';
+{guesses.textContent = 'Previous Guesses:'}
+guesses.textContent += ueserGuess + '';
 
-if (usserGuess === randomNumber) {
+if (userGuess === randomNumber) {
     lastResult.textContent = 'Yama says you may pass to the pure realm!';
     lastResult.style.backgroundColor = 'red';
     lowOrHi.textContent = '';
     setGameOver ();
 } else if (guessCount === 4) {
-    lastResult.textConent = 'To the Lower Realms With Yout!';
+    lastResult.textConent = 'To the Lower Realms With You!';
     lowOrHi.textContent = ''
     setGameOver ();
 } else {
     lastResult.textContent = 'Wrong!';
     lastResult.style.backgroundColor = 'green';
     if (userGuess > randomNumber) {
-        lowOrHi.textContent = 'Yama Says, " You are not focused, your guess is too High!"';
-    } else if(userGuess < randmoNumber) {lowOrHi.textContent = 'Yama says,"Distracted Again! your guess is too high"'}
-    }
-
-  });
+            lowOrHi.textContent = 'You are not focused, your guess is too High!';
+    } else if(userGuess < randmoNumber) {lowOrHi.textContent = 'Distracted Again! your guess is too high'}
+});
