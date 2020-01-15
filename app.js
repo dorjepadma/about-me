@@ -3,7 +3,6 @@
 import isYes from './isYes.js';
  // grabbing elements from html   
 const quizButton = document.getElementById('quizButton');
-console.log (quizButton);
 const total = document.getElementById('total');
 // add a function on click of button
 quizButton.addEventListener('click', () => {
