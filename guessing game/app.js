@@ -15,7 +15,6 @@ function checkGuess(){
     if (guesscount ===1) 
 {guesses.textContent = 'Previous Guesses: '}
 
-
 guesses.textContent += ueserGuess + ' ';
 
 if (usserGuess === randomNumber) {
@@ -35,9 +34,4 @@ if (usserGuess === randomNumber) {
     } else if(userGuess < randmoNumber) {lowOrHi.textContent = 'Yama says,"Distracted Again! your guess is too high"'}
     }
 
-
-guessCount++;
-guessField.value = '';
-guessFiled.focus();
-
-})
+  });
