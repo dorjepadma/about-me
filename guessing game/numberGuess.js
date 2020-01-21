@@ -1,11 +1,11 @@
-export default function compareNumbers(guess, correctNumber) {
-    if (guess === correctNumber){
+export default function compareNumbers(guessNumber, randomNumber) {
+    if (guessNumber === randomNumber){
         return 0;
     }
-    if (guess > correctNumber){
+    if (guessNumber > randomNumber){
         return 1;
     }
-    if (guess < correctNumber){
+    if (guessNumber < randomNumber){
         return -1;
     }
 

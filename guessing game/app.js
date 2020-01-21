@@ -1,39 +1,41 @@
 import compareNumbers from './guessing game/numberGuess.js';
-let randomNumber = Math.floor(Math.random()*20);
+let randomNumber = Math.floor(Math.random() * 20);
 
-const input = document.getElementById('guessField');
-const submitGuess = document.getElementById('submitGuess');
-const guesses = document.getElementById('guesses');
-const lowOrHi = document.getElementById('lowOrHi');
-const lastResult = document.getElementById('lastResult');
+const input = document.getElementById('guessField'); //your guess
+const submitGuess = document.getElementById('submitGuess');//event listener submits guess and runs compare numbers
+const lowOrHi = document.getElementById('lowOrHi');//is your guess low or hi
+// const guesses = document.getElementById('guessCount');//the number of guesses you have taken
+const lastResult = document.getElementById();
 let guessCount = 0;
 submitGuess.addEventListener('click', () => {
-const userGuess = input.value ()
-function compareNumbers(){
-    let userGuess = Number(guessField.value);
-    if (guessCount === 4)
-// where does numberGuess go or what does numberGuess replace
-guesses.textContent = previousGuesses;
-guesses.textContent += ueserGuess + '';
+    const guessField = input.value ();
+    function guavaBerry(){
+        let guessNumber = Number(guessField.value);
+        let result = compareNumbers(guessNumber, randomNumber);
+        // where does numberGuess go or what does guessNumber replace
+        // guesses.textContent = previousGuess;
+        // guesses.textContent += ueserGuess + '';
 
-}  if (userGuess === randomNumber) {
-    lastResult.textContent = 'Yama says you may pass to the pure realm!';
-    lastResult.style.backgroundColor = 'red';
-    lowOrHi.textContent = '';
-    setGameOver ();
-}   else if (guessCount === 4) {
-    lastResult.textConent = 'To the Lower Realms With You!';
-    lowOrHi.textContent = '';
-    setGameOver ();
-    } 
-    else if 
-    (userGuess > randomNumber);
-    {
-    lowOrHi.textContent = 'You are not focused, your guess is too High!';
-    } 
-    // else if {
-    (userGuess < randmoNumber);
-        lastResult.textContent = 'Wrong!';
-        lastResult.style.backgroundColor = 'green';
-         lowOrHi.textContent = 'Distracted Again! your guess is too high'}
+        if (result === 0) {
+            lastResult.textContent = 'Yama says you may pass to the pure realm!';
+            lowOrHi.textContent = '';
+            // setGameOver();
+        }   
+        else if
+        (result === 1) {
+            lowOrHi.textContent = 'Yama Says your guess is too High! try again.';            
+        } 
+        else if
+        (result === -1) {
+            lowOrHi.textContent = 'Yama says your guess is too low! try again.';} 
+        
+        else if (guessCount === 4) {
+            lastResult.textContent = 'To the Lower Realms With You!';
+            lowOrHi.textContent = '';
+                // setGameOver();
+        } 
+    
+        guessCount++;
+        guessField.value = '';
+    }
 });
